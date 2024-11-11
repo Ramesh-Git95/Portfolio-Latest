@@ -54,25 +54,21 @@ const Testimonial = () => {
     }
 
   return (
-    
     // <section className=''>
     //     <h1 className='text-3xl text-left font-bold my-6 text-yellow-400 font-mono animate-pulse'>Testimonial</h1>
-    //     <div className='bg-gradient-to-r from-teal-700 to-gray-400 text-left rounded-xl p-8 border-2 border-green-900'> 
-            
-
+    //     <div className='bg-gradient-to-r from-teal-700 to-gray-400 text-left rounded-xl p-8 border-2 border-green-900'>
 
     // //         {/* working code for testimonial  */}
-            
+
     //           {testimonials.map((item,index)=> (index === current &&
-                
+
     //             <div drag="x"
     //             key={index}>
 
-              
     //             <div className='pb=[20px] flex items-start gap-4 mb-4 -mt-1'>
     //                 <img className='w-8 h-8' src="quote.svg" alt="" />
     //                 <h2 className='text-black text-2xl font-bold font-sans'>{item.text}</h2>
-                    
+
     //             </div>
     //             <div className='flex justify-between items-end'>
     //             <div className='flex gap-4 items-center'>
@@ -84,7 +80,7 @@ const Testimonial = () => {
     //                 <h6 className='text-white'>{item.name}</h6>
     //                 <span className='text-white'>{item.position}</span>
     //             </div>
-               
+
     //             </div>
     //             <div className='flex gap-1 -m-4'>
     //             <img className='w-7 h-7 p-1 rounded-lg cursor-pointer bg-white' src="previous.svg" alt="" onClick={previous}/>
@@ -92,68 +88,111 @@ const Testimonial = () => {
     //             </div>
     //             </div>
     //         </div>
-            
-        
-    //     ))}  
 
-       
-            
+    //     ))}
+
     //     </div>
 
-
     // </section>
-    
 
     <section className="">
-        
-        
-        <div className='bg-gradient-to-r from-teal-700 to-gray-400 text-left rounded-xl p-6 border-2 border-green-900 mt-5'> 
-            <h1 className='text-3xl text-left font-bold  text-yellow-400 font-mono animate-pulse mb-5'>Testimonial</h1>
-            <div className='flex items-start justify-start'>
-                <h1 className='mb-5 font-mono text-slate-950 font-bold text-2xl ml-10'>What my Clients Say about me!</h1>
-            </div>
-            <Swiper
-                modules={[Navigation,Autoplay]}
-                spaceBetween={0}
-                slidesPerView={2}
-                navigation
-                pagination={{ clickable: true }}
-               autoplay={{delay:6000, disableOnInteraction:false}}
-            >
-            {testimonials.map((item,index)=>(
-               
-                <SwiperSlide>
-            <div class="relative flex justify-center w-72 bg-gradient-to-l from-gray-100 to-slate-400 rounded-3xl shadow-md shadow-[rgba(20,5,100,200)] mb-3 ml-9" key={item.name}>
-                <div class="px-5 py-6">
-                    <div class="flex items-start justify-between">
-                        <img class="flex-shrink-0 object-cover w-10 h-10 rounded-full" src={item.avatar} alt="" />
-                        <div class="min-w-0 ml-3 mr-auto">
-                            <p class="text-base font-bold text-black truncate">{item.name}</p>
-                            <p class="text-sm text-gray-950 truncate">{item.position}</p>
-                        </div>
-                        <img src="facebook.png" className='size-9 saturate-200 contrast-125'/>
-                        
-                    </div>
-                    <blockquote class="mt-5">
-                        <p class="text-base text-black font-semibold italic">
-                            {item.text}
-                            
-                        </p>
-                        <div className="rating mt-2 flex justify-center items-center shadow-2xl shadow-yellow-400" >
-                            <input disabled type="radio" name="rating-1" className="mask mask-star bg-[rgb(255,255,1)] checked" />
-                            <input disabled type="radio" name="rating-1" className="mask mask-star bg-[rgb(255,255,1)]" />
-                            <input disabled type="radio" name="rating-1" className="mask mask-star bg-[rgb(255,255,1)]" />
-                            <input disabled type="radio" name="rating-1" className="mask mask-star bg-[rgb(255,255,1)]" />
-                            <input disabled type="radio" name="rating-1" className="mask mask-star bg-[rgb(255,255,1)]"  />
-                        </div>
-                    </blockquote>
-                </div>
-            </div>
-            </SwiperSlide>
+      <div className="bg-gradient-to-r from-teal-700 to-gray-400 text-left rounded-xl p-6 border-2 border-green-900 mt-5 shadow-md shadow-green-500">
+        <h1 className="text-3xl text-left font-bold  text-yellow-400 font-mono animate-pulse mb-5">
+          Testimonial
+        </h1>
+        <div className="flex items-start justify-start">
+          <h1 className="mb-5 font-mono text-slate-950 font-bold text-2xl ml-10">
+            What my Clients Say about me!
+          </h1>
+        </div>
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          spaceBetween={0}
+          breakpoints={{
+            340: {
+              slidesPerView: 1,
+            },
+            640:{
+                slidesPerView:1,
+            },
+            768:{
+                slidesPerView: 2
+            }
+          }}
+          //slidesPerView={2}
+          navigation
+          pagination={{ clickable: true }}
 
-           
-            ))}
-             </Swiper>
+          autoplay={{delay:6000, disableOnInteraction:false}}
+        >
+          {testimonials.map((item, index) => (
+            <SwiperSlide>
+              <div
+                class="relative flex justify-center w-80 bg-gradient-to-l from-gray-100 to-slate-400 rounded-3xl shadow-md shadow-black mb-3 ml-7"
+                key={item.name}
+              >
+                <div class="px-5 py-6">
+                  <div class="flex items-start justify-between">
+                    <img
+                      class="flex-shrink-0 object-cover w-10 h-10 rounded-full"
+                      src={item.avatar}
+                      alt=""
+                    />
+                    <div class="min-w-0 ml-3 mr-auto">
+                      <p class="text-base font-bold text-black truncate">
+                        {item.name}
+                      </p>
+                      <p class="text-sm text-gray-950 truncate">
+                        {item.position}
+                      </p>
+                    </div>
+                    <img
+                      src="facebook.png"
+                      className="size-9 saturate-200 contrast-125"
+                    />
+                  </div>
+                  <blockquote class="mt-5">
+                    <p class="text-black font-semibold italic text-sm">
+                      {item.text}
+                    </p>
+                    <div className="rating mt-2 flex justify-center items-center shadow-2xl shadow-yellow-400">
+                      <input
+                        disabled
+                        type="radio"
+                        name="rating-1"
+                        className="mask mask-star bg-[rgb(255,255,1)] checked"
+                      />
+                      <input
+                        disabled
+                        type="radio"
+                        name="rating-1"
+                        className="mask mask-star bg-[rgb(255,255,1)]"
+                      />
+                      <input
+                        disabled
+                        type="radio"
+                        name="rating-1"
+                        className="mask mask-star bg-[rgb(255,255,1)]"
+                      />
+                      <input
+                        disabled
+                        type="radio"
+                        name="rating-1"
+                        className="mask mask-star bg-[rgb(255,255,1)]"
+                      />
+                      <input
+                        disabled
+                        type="radio"
+                        name="rating-1"
+                        className="mask mask-star bg-[rgb(255,255,1)]"
+                      />
+                    </div>
+                  </blockquote>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
         {/* <Swiper
             modules={[Navigation,Autoplay]}
             spaceBetween={0}
@@ -267,11 +306,9 @@ xml:space="preserve">
             </SwiperSlide>
             
         </Swiper> */}
-           
-        </div>
+      </div>
     </section>
-  
-  )
+  );
 
   
 }

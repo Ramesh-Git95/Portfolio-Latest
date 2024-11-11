@@ -59,7 +59,7 @@ const skills =[
 
 const Skills = () => {
   return (
-  <section className="bg-gradient-to-r from-teal-600 to-gray-800 text-left rounded-xl p-2  shadow-md mt-6 mb-6 border-2 border-green-900 border-opacity-100">
+  <section className="bg-gradient-to-r from-teal-600 to-gray-800 text-left rounded-xl p-2  shadow-md shadow-green-500 mt-6 mb-6 border-2 border-green-900 border-opacity-100">
     <h2 className="text-3xl md:text-3xl text-yellow-500 mb-2 font-mono font-bold animate-pulse mx-auto  grid s:gap-x-64 md:gap-x-52 grid-cols-2">
       Skills
       {/* <img src="requirements.png" alt="" className="self-center mx-auto w-10 h-10 border-b-2 border-yellow-400 rounded-lg brightness-105 saturate-200"/> */}
