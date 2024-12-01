@@ -52,7 +52,11 @@ const WorkExpirience = () => {
         <h2 className="text-3xl md:text-3xl text-yellow-500 font-bold animate-pulse font-mono mx-auto grid gap-x-16 md:gap-x-52 grid-cols-2">
           Experience
           {/* <img src="experience.png" alt="" className="mx-auto w-10 h-10 border-b-2 border-yellow-400 rounded-lg brightness-105 saturate-200"/> */}
+          
         </h2>
+        
+        
+         
         <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-20">
           <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
             <div className="w-full max-w-3xl mx-auto">
